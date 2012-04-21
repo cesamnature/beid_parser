@@ -5,8 +5,11 @@ class BeidParser::Beid
     :card_number,:chip_number,:validity_date_begin,:validity_date_end,
     :delivery_municipality,:street_and_number,:zip,:municipality,
     :certificates
-  def initialize(filename)
-    @document = Document.new(File.new(filename))
+    
+  #File can either be a filepath or an actual file
+  def initialize(file)
+    file = File.new(file) if file.is_a? String
+    @document = Document.new(file)
     parse_document
   end
   
