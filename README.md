@@ -20,7 +20,7 @@ Usage
   - #nationality: The nationality
   - #place_of_birth: The place of birth
   - #date_of_birth: The date of birth, *Date*
-  - #national_number: The national number, *Fixnum*
+  - #national_number: The national number
   - #gender: The gender ("male" or "female")
   - #validity_date_begin: The card validity begin date, *Date*
   - #validity_date_end: The card validity end date, *Date*

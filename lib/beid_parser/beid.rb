@@ -39,7 +39,7 @@ class BeidParser::Beid
     xml_certificates  = root.elements.to_a("certificates").first
     
     # Identity
-    @national_number  = get_info(identity, "nationalnumber", true).to_i
+    @national_number  = get_info(identity, "nationalnumber", true)
     @date_of_birth    = parse_date(get_info(identity, "dateofbirth", true))
     @gender           = get_info(identity, "gender", true)
     @name             = get_info(identity, "name")
