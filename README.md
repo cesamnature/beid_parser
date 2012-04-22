@@ -4,6 +4,14 @@ Ruby beID parser. Allowing to easily handle beID xml files
 
 Please refer to http://eid.belgium.be/en/developing_eid_applications/ for references
 
+Install
+-------
+Install it on your system:
+  - gem install beid_parser
+
+Or add it to your Gemfile:
+  - gem 'beid_parser'
+
 Usage
 -----
 **Create a new Beid from a beID xml file:**
