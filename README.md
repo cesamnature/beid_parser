@@ -17,7 +17,7 @@ Usage
 **Create a new Beid from a beID xml file:**
   - beid = BeidParser::Beid.new(filepath) 
 
-**Methods accessibles:**
+**Methods available:**
   - #picture64: The picture encoded in base64
   - #picture: The decoded picture
   - #extract_picture([filename]): Write the JPG picture into a file
