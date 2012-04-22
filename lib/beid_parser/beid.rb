@@ -24,12 +24,15 @@ class BeidParser::Beid
   end
   
   # Extract the citizen picture into a JPG file
-  def extract_picture(filename="picture.jpg")
-    if !filename.match(/.*\.jpg/)
+  def extract_picture(filename="beid_#{national_number}.jpg")
+    if !filename.match(/.*\.jpg$/)
       raise "The ouput file for the picture must have the '.jpg' extension."
     end
     
-    File.open(filename, 'w') { |f| f.write(picture) }
+    File.open(filename, 'w') do |f| 
+      f.binmode
+      f.write(picture)
+    end
   end
   
   private
