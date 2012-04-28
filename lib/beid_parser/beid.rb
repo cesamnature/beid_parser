@@ -1,6 +1,6 @@
 class BeidParser::Beid
   include REXML
-  attr_reader :picture64,:name,:firstname,:middlename,
+  attr_reader :picture64,:name,:firstname,:middlenames,
     :nationality,:place_of_birth,:date_of_birth,:national_number, :gender,:document_type,
     :card_number,:chip_number,:validity_date_begin,:validity_date_end,
     :delivery_municipality,:street_and_number,:zip,:municipality,
@@ -11,11 +11,6 @@ class BeidParser::Beid
     file = File.new(file) if file.is_a? String
     @document = Document.new(file)
     parse_document
-  end
-  
-  #Return an array of firstnames
-  def firstnames
-    firstname.split(" ")
   end
   
   # Decode the Base64 encoded picture
@@ -50,7 +45,7 @@ class BeidParser::Beid
     @gender           = get_info(identity, "gender", true)
     @name             = get_info(identity, "name")
     @firstname        = get_info(identity, "firstname")
-    @middlename       = get_info(identity, "middlename")
+    @middlenames       = get_info(identity, "middlenames")
     @nationality      = get_info(identity, "nationality")
     @place_of_birth   = get_info(identity, "placeofbirth")
     @picture64        = get_info(identity, "photo")

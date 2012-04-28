@@ -4,8 +4,8 @@ require "beid_parser/version"
 
 Gem::Specification.new do |s|
    s.name = "beid_parser"
-   s.summary = "Ruby beID parser. Allowing to easily handle beID xml files"
-   s.description = "Ruby beID parser. Allowing to easily handle beID xml files"
+   s.summary = "Ruby beID parser. Allowing to easily handle beID XML files"
+   s.description = "Ruby beID parser. Allowing to easily handle beID XML files"
    s.version = BeidParser::VERSION
    s.authors = "Thibault Poncelet"
    s.email = "thibaultponcelet@gmail.com"

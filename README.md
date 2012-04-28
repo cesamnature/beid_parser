@@ -1,6 +1,6 @@
 beid_parser
 ===========
-Ruby beID parser. Allowing to easily handle beID xml files
+Ruby beID parser. Allowing to easily handle beID XML files
 
 Please refer to http://eid.belgium.be/en/developing_eid_applications/ for references
 
@@ -22,9 +22,8 @@ Usage
   - #picture: The decoded picture
   - #extract_picture([filename]): Write the JPG picture into a file
   - #name: The family name
-  - #firstname The firstname (including second first name if any)
-  - #firstnames: Array of firstnames
-  - #middlename: The middlename
+  - #firstname The firstname 
+  - #middlenames: The middlenames (if any)
   - #nationality: The nationality
   - #place_of_birth: The place of birth
   - #date_of_birth: The date of birth, *Date*
@@ -42,3 +41,11 @@ Usage
   - #certificates: A Hash of all the certificates on the card (typically :root,:citizenca,:authentication,:signing,rrn)
   
 NB: When not specified fields are stored as String.
+
+
+Warning
+-------
+
+The XML format is based on the last version of the beID viewver. 
+On Linux please use the packages available here: http://eid.belgium.be/en/using_your_eid/installing_the_eid_software/linux/
+instead of the ones in the repositories of your distribution.
